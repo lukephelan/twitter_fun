@@ -1,4 +1,15 @@
-<h2>This is some content.</h2>
+<div id="controls">
+  <input id="poster" type="text">
+  <button id="btn">Find Posts By</button>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit rerum aut dolorem aliquam nostrum. Iure tempora, nisi labore fuga recusandae suscipit, perferendis eveniet ut voluptatibus ea ratione commodi voluptate ex.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, voluptatum. Cumque numquam omnis laborum fugiat, ipsum quod ducimus sapiente porro recusandae saepe voluptates consequuntur optio a dolorem non necessitatibus explicabo!</p>
+
+</div>
+
+<div id="posts">
+  <h3>These are some wonderful posts from our users:</h3>
+
+  <% @posts.each do |t| %>
+  <p class="<%=t.user.name%>"><%= t.content%> - posted by <%= t.user.name %> (<%=t.user.email %>)</p>
+  <% end %>
+
+</div>
