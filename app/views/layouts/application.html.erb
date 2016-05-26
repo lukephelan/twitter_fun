@@ -2,11 +2,24 @@
 <html>
 <head>
   <title>Twatter</title>
+  <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div id="top-menu">
+  <img src="https://greatrednorth.files.wordpress.com/2011/06/twatter_logo_sticker-p2179701256406.jpg" alt="">
+  <h1>Welcome to Twatter</h1>
+  <div id="user-info">
+    <% if @current_user %>
+      <p>Welcome, <%= @current_user.name %>!</p>
+      <a href="/logout"><button>Logout</button></a>
+    <% end %>
+  </div>
+
+</div>
 
 <%= yield %>
 

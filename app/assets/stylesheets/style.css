@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: none;
+}
+
+#top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  border-style: dashed;
+}
+
+#top-menu p {
+  padding-right: 20px;
+}
+
+#top-menu img {
+  width: 10%;
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: 'Days One', sans-serif;
+}
