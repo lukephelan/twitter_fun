@@ -10,10 +10,14 @@
 <body>
 
 <div id="top-menu">
-  <img src="https://greatrednorth.files.wordpress.com/2011/06/twatter_logo_sticker-p2179701256406.jpg" alt="">
-  <h1>Welcome to Twatter</h1>
-  <div id="user-info">
-    <% if @current_user %>
+  <% if @current_user %>
+  <div id='profile-pic'>
+    <img src="<%= @current_user.profile_pic %>" alt=""></>
+  <% end %>
+  </div>
+  <img src="http://1.bp.blogspot.com/_oRrOZC9jH_c/S8BKaQWpGuI/AAAAAAAAEEk/xxji8p6zBTo/s1600/twatter.jpg" alt=""></>
+  <% if @current_user %>
+    <div id="user-info">
       <p>Welcome, <%= @current_user.name %>!</p>
       <a href="/logout"><button>Logout</button></a>
     <% end %>
