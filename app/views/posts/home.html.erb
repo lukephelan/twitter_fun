@@ -1,15 +1,49 @@
 <div id="controls">
+
   <input id="poster" type="text">
   <button id="btn">Find Posts By</button>
-
+  <button id="btn-quote">Design Quotes</button>
+  <button id="btn-chuck">Chuck Norris</button>
+  <button id="btn-cat">Cat Facts</button>
 
 </div>
 
 <div id="posts">
-  <h3>These are some wonderful posts from our users:</h3>
+
+  <h3>User Posts:</h3>
 
   <% @posts.each do |t| %>
-  <p class="<%=t.user.name%>"><%= t.content%> - posted by <%= t.user.name %> (<%=t.user.email %>)</p>
+  <p class="<%=t.user.name%>">"<%= t.content.capitalize%>" - posted by <%= t.user.name %> (<%=t.user.email %>)</p>
+  <% end %>
+
+</div>
+
+<div id="quote" class="stuff">
+
+  <h3>Design Quotes:</h3>
+
+  <% for i in 0..5 %>
+  <%= @quote[i]["content"].html_safe %>
+  <% end %>
+
+</div>
+
+<div id="chuck" class="stuff">
+
+  <h3>Chuck Norris:</h3>
+
+  <% for i in 0..5 %>
+  <p><%= @chuck["value"][i]["joke"].html_safe %></p>
+  <% end %>
+
+</div>
+
+<div id="catfact" class="stuff">
+
+  <h3>Cat Facts:</h3>
+
+  <% for i in 0..5 %>
+  <p><%= @catfact[:facts][i] %></p>
   <% end %>
 
 </div>

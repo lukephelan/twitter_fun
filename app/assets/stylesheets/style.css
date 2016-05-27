@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: none;
+  font-family: 'Droid Serif', serif;
+  background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/simple-pattern-white-seamless-website-background.jpg);
+  background-attachment: fixed
 }
 
 #top-menu {
@@ -8,7 +11,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 150px;
-  border-style: dashed;
+  /*border-style: dashed;*/
 }
 
 #top-menu p {
@@ -21,10 +24,41 @@ body {
 }
 
 #top-menu > :first-child {
-  border-radius: 50%;
   padding-left: 20px;
+}
+
+#top-menu #profile-pic {
+  width: 10%;
 }
 
 h1 {
   font-family: 'Days One', sans-serif;
+}
+
+#posts {
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+.stuff {
+  display: none;
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#controls div {
+  height: 100%;
+}
+
+#controls div input, button {
+  height: 100%;
+  font-size: 1em;
+}
+
+#ontent {
+  display: flex;
+  justify-: space-around;  ;
 }

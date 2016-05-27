@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Twatter</title>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
@@ -11,9 +12,7 @@
 
 <div id="top-menu">
   <% if @current_user %>
-    <div id='profile-pic'>
-    <img src="<%= @current_user.profile_pic %>" alt=""></>
-  </div>
+    <img src="<%= @current_user.profile_pic %>" alt="" id="profile-pic"></>
   <% end %>
 
   <img src="http://1.bp.blogspot.com/_oRrOZC9jH_c/S8BKaQWpGuI/AAAAAAAAEEk/xxji8p6zBTo/s1600/twatter.jpg" alt="" id="logo"></>
