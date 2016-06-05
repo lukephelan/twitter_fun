@@ -14,6 +14,11 @@ class PostsController < ApplicationController
     quotes = HTTParty.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=10')
     chuck = HTTParty.get('http://api.icndb.com/jokes/random/10')
     catfacts = HTTParty.get('http://catfacts-api.appspot.com/api/facts?number=10')
+    scrapyscrape = HTTParty.get('http://www.news.com.au/national/breaking-news')
+
+    # Collect our scraped data
+    @news = Nokogiri::HTML(scrapyscrape)
+
 
     # making accessible by ERB under a variable
     @quote = quotes
